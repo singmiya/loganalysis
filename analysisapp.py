@@ -78,7 +78,7 @@ class AnalysisFrame(wx.Frame):
         x2 = []
         y2 = []
         statisticInfo2 = StatisticInfo('sum cost')
-        p1 = 'post_request_cost:{}:'.format(self.cmd)
+        p1 = 'post_request_cost:.*:{}:'.format(self.cmd)
         pattern1 = '{}\d+'.format(p1)
         p2 = '耗时:{}:'.format(self.cmd)
         pattern2 = '{}\d+'.format(p2)
@@ -92,7 +92,7 @@ class AnalysisFrame(wx.Frame):
 
             st = re.search(pattern1, line)
             if st is not None:
-                t = st.group(0).replace(p1, '')
+                t = re.sub(p1, '', st.group(0))
                 x1.append(mlis)
                 y1.append(int(t))
                 statisticInfo1.count(int(t))
@@ -100,7 +100,7 @@ class AnalysisFrame(wx.Frame):
 
             st1 = re.search(pattern2, line)
             if st1 is not None:
-                t = st1.group(0).replace(p2, '')
+                t = re.sub(p2, '', st1.group(0))
                 x2.append(mlis)
                 y2.append(int(t))
                 statisticInfo2.count(int(t))
