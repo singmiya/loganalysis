@@ -1,0 +1,30 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            // "args": ["heart_beat", "totalCost"]
+            // "args": ["hf_heart_beat", "totalCost"]
+            // "args": ["sync_white_list", "totalCost,bizCost,sendCost,encodeCost,rMsgLength"]
+            // "args": ["sync_white_list", "totalCost,bizCost,sendCost,encodeCost"]
+            // "args": ["sync_white_list", "totalCost,bizCost"]
+            // "args": ["sync_white_list", "totalCost,sendCost"]
+            // "args": ["sync_white_list", "totalCost,decodeCost"]
+            // "args": ["sync_white_list", "totalCost,encodeCost"]
+            // "args": ["sync_white_list", "totalCost,rMsgLength"]
+            // "args": ["sync_white_list", "recvCost,decodeCost,bizCost,netCost,encodeCost,sendCost"]
+            // "args": ["sync_white_list", "recvCost,sendCost,bizCost"]
+            // "args": ["heart_beat", "totalCost"]
+            "args": ["sync_params", "recvCost,decodeCost,bizCost,netCost,encodeCost,sendCost"]
+
+        }
+    ]
+}
